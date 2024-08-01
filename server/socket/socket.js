@@ -28,7 +28,6 @@ io.on('connection', async (socket) => {
     socket.on('message', (userId) => {
         console.log('User ID from message:', userId);
     });
-
     socket.on('disconnect', () => {
         console.log('Disconnected user:', socket.id);
         onlineUser.delete(user?._id);
